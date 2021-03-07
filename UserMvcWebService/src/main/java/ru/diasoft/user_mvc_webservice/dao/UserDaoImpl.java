@@ -38,10 +38,11 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void update(User user) {
         MapSqlParameterSource parameters = new MapSqlParameterSource();
+        parameters.addValue("id", user.getId());
         parameters.addValue("name", user.getName());
         parameters.addValue("pass", user.getPass());
         parameters.addValue("mail", user.getMail());
-        String sql = "UPDATE t_user SET name = :name, pass = :pass, mail = :mail";
+        String sql = "UPDATE t_user SET name = :name, pass = :pass, mail = :mail WHERE user_id = :id";
         
         jdbcTemplate.update(sql, parameters);
         
@@ -66,7 +67,7 @@ public class UserDaoImpl implements UserDao {
     public User getUserById(int id) {
         MapSqlParameterSource parameters = new MapSqlParameterSource();
         parameters.addValue("id", id);
-        String sql = "SELECT * FROM t_user WHERE id=:id";   
+        String sql = "SELECT * FROM t_user WHERE user_id=:id";   
         
         User user = jdbcTemplate.queryForObject(sql, parameters, new UserRowMapper());
         
