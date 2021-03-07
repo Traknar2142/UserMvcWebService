@@ -1,12 +1,10 @@
-package ru.diasoft.user_mvc_webservice.dao;
+package ru.diasoft.user_mvc_webservice.services;
 
 import java.util.List;
 
 import ru.diasoft.user_mvc_webservice.entities.User;
 
-
-public interface UserDao {
-
+public interface UserService {
     public void add(User user);
 
     public void update(User user);
@@ -16,5 +14,4 @@ public interface UserDao {
     public User getUserById(int id);
 
     public List<User> getUsersList();
-
 }
