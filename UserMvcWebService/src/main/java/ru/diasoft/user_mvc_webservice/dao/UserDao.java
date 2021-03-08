@@ -4,7 +4,6 @@ import java.util.List;
 
 import ru.diasoft.user_mvc_webservice.entities.User;
 
-
 public interface UserDao {
 
     public void add(User user);

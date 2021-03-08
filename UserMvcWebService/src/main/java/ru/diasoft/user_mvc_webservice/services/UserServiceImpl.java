@@ -9,10 +9,10 @@ import ru.diasoft.user_mvc_webservice.dao.UserDao;
 import ru.diasoft.user_mvc_webservice.entities.User;
 
 @Service
-public class UserServiceImpl implements UserService{
-    
+public class UserServiceImpl implements UserService {
+
     UserDao userDao;
-    
+
     @Autowired
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
@@ -21,18 +21,18 @@ public class UserServiceImpl implements UserService{
     @Override
     public void add(User user) {
         userDao.add(user);
-        
+
     }
 
     @Override
     public void update(User user) {
         userDao.update(user);
-        
+
     }
 
     @Override
     public void removeUser(int id) {
-        userDao.removeUser(id);        
+        userDao.removeUser(id);
     }
 
     @Override

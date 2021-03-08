@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import ru.diasoft.user_mvc_webservice.entities.User;
 
-public class UserRowMapper implements RowMapper<User>{
+public class UserRowMapper implements RowMapper<User> {
 
     @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {

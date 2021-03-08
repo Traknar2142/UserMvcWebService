@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class UserMvcWebServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UserMvcWebServiceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UserMvcWebServiceApplication.class, args);
+    }
 
 }
