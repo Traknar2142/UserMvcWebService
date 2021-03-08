@@ -19,12 +19,12 @@ User MVC Web Service realization
 public List<User> getUserList()
 
 При вызове метода GET отдает JSON с перечнем всех сущностей User, хранимых в БД
--------------------------------------------------------------------------------------------------
+
 @GetMapping("/user/{id}")
 public User getUser(@PathVariable("id") int id)
 
 При вызове метода GET c указанием ID будет передан JSON с описанием сущности User, запрошенной через ID
--------------------------------------------------------------------------------------------------
+
 @PostMapping("/save")
 public void addUser(@RequestBody User user)
 
@@ -35,7 +35,7 @@ public void addUser(@RequestBody User user)
     "mail":"String"
 }
 Сущность будет записана в БД
--------------------------------------------------------------------------------------------------
+
 @PutMapping("/update")
 public void updateUser(@RequestBody User user)
 При вызове метода POST в теле которого будет описана сущность User формата:
@@ -46,7 +46,7 @@ public void updateUser(@RequestBody User user)
     "mail":"String"
 }
 По переданному ID сущность будет перезаписана согласно переданному сообщению JSON
--------------------------------------------------------------------------------------------------
+
 @DeleteMapping("/delete/{id}")
 public void deleteUser(@PathVariable("id") int id)
 
